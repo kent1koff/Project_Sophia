@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="contentSpaceBetween itemsCenter">
+        <div class="logo itemsCenter" onclick="location.reload()">
+            <img src="./images/logo.png" class="logoImg">
+            <h6>Book Haven</h6>
+        </div>
+        <nav>
+            <span class="titleLarge" id="home" onclick="homeBlock()">Home</span>
+            <span class="titleLarge" id="aboutUs" onclick="aboutUsBlock()">About Us</span>
+            <span class="titleLarge" id="gallery" onclick="galleryBlock()">Gallery</span>
+            <span class="titleLarge" id="events" onclick="eventsBlock()">Events</span>
+        </nav>
+    </header>
+    <div class="infoBlockHome">
+        <img src="./images/close.png" class="closeImg" id="closeImg">
+        <span class="infoBlockHomeText" id="infoBlockHomeText"></span>
+        <span class="bodyLarge blockHomeText" id="blockHomeText"></span>
+    </div>
+    <main id="mainBlock">
+        <div class="firstRowHomeBlock directionColumn itemsCenter" id="homeBlock">
+            <h6>Why shop here...</h6>
+            <div class="firstRowHome contentCenter">
+                <div class="firstRowTextBlock">
+                    <span class="firstRowText">Quality</span>
+                </div>
+                <div class="firstRowTextBlock">
+                    <span class="firstRowText">Convenience</span>
+                </div>
+                <div class="firstRowTextBlock">
+                    <span class="firstRowText">Prices</span>
+                </div>
+            </div>
+            <h6 class="titleHomeBlock">We have a lot of genres</h6>
+            <div class="secondRowHome contentCenter">
+                <div class="secondRowTextBlock" id="Novel">
+                    <span class="firstRowText">Novel</span>
+                </div>
+                <div class="secondRowTextBlock" id="Novella">
+                    <span class="firstRowText">Novella</span>
+                </div>
+                <div class="secondRowTextBlock" id="Short story">
+                    <span class="firstRowText">Short story</span>
+                </div>
+                <div class="secondRowTextBlock" id="Poetry">
+                    <span class="firstRowText">Poetry</span>
+                </div>
+                <div class="secondRowTextBlock" id="Detective">
+                    <span class="firstRowText">Detective</span>
+                </div>
+                <div class="secondRowTextBlock" id="Fiction">
+                    <span class="firstRowText">Fiction</span>
+                </div>
+            </div>
+        </div>
+        <div id="aboutUsBlock" class="aboutUsBlock itemsCenter directionColumn">
+            <span class="titleLarge aboutUsText">Book Haven Bookstore is a local treasure for book enthusiasts, offering a diverse selection of books, magazines, journals, and office supplies.</span>
+            <h6>Contact us</h6>
+            <form class="formAboutUs directionColumn itemsCenter">
+                <span class="bodyLarge">Name:</span>
+                <input placeholder="Type in your name..." class="inputFormFooter" type="name" id="nameInfoInput">
+                <span class="bodyLarge">Email:</span>
+                <input placeholder="Type in your email..." class="inputFormFooter"  type="email" id="emailInfoInput">
+                <span class="bodyLarge">Feedback:</span>
+                <input placeholder="Type in your feedback..." class="inputFormFooter" type="name" id="feedbackInfoInput">
+                <div class="checkboxAboutUs">
+                    <input type="checkbox" id="customOrderCheckbox">
+                    <span class="bodyLarge">Custom order</span>
+                </div>
+                <input placeholder="Provide information about order..." class="inputFormFooter hidden" id="orderInfoInput">
+                <button onclick="sendAboutUs()" type="button">Submit</button>
+            </form>
+        </div>
+        <div id="eventsBlock" class="eventsBlock itemsCenter directionColumn">
+            <h6>Events</h6>
+            <div class="textEventsBlock directionColumn itemsCenter">
+                <span class="titleLarge" id="noEventsText">No events yet.</span>
+                <span onclick="createNewEvent()" class="titleLarge orange">Create new?</span>
+            </div>
+            <div class="eventCard" id="eventCard">
+                <h6 class="titleEventCard">New</h6>
+                <div class="textEventCard directionColumn itemsCenter">
+                    <span id="nameEvent" class="titleLarge"></span>
+                    <span id="timeEvent" class="titleLarge"></span>
+                </div>
+            </div>
+        </div>
+        <div id="galleryBlock" class="galleryBlock">
+            <img src="./images/cart.png" class="cartImg" onclick="cart()">
+            <span class="textClearCart bodyLarge" onclick="clearCart()">Clear Cart</span>
+            <div class="cardGallery directionColumn" onclick="BrieMine4Ever()">
+                <img src="./images/Client3_Book1.png" class="imgCardGallery">
+                <small>Brie Mine 4Ever, a book for cheese lovers</small>
+                <span class="titleLarge hoverCart">Click and add to cart</span>
+            </div>
+            <div class="cardGallery directionColumn" onclick="GloryRiders()">
+                <img src="./images/Client3_Book2.png" class="imgCardGallery">
+                <small>Glory Riders, a book about bikers</small>
+                <span class="titleLarge hoverCart">Click and add to cart</span>
+            </div>
+            <div class="cardGallery directionColumn" onclick="SorcerersShadowedChronicles()">
+                <img src="./images/Client3_Book3.png" class="imgCardGallery">
+                <small>Sorcerer’s Shadowed Chronicles, a fantasy book</small>
+                <span class="titleLarge hoverCart">Click and add to cart</span>
+            </div>
+            <div class="cardGallery directionColumn" onclick="Ball()">
+                <img src="./images/Client3_Magazine1.png" class="imgCardGallery">
+                <small>Ball, a magazine about pickleball</small>
+                <span class="titleLarge hoverCart">Click and add to cart</span>
+            </div>
+            <div class="cardGallery directionColumn" onclick="Travel()">
+                <img src="./images/Client3_Magazine2.png" class="imgCardGallery">
+                <small>Travel, a magazine for travelers</small>
+                <span class="titleLarge hoverCart">Click and add to cart</span>
+            </div>
+            <div class="cardGallery directionColumn" onclick="Eat()">
+                <img src="./images/Client3_Magazine3.png" class="imgCardGallery">
+                <small>Eat., a magazine for foodies</small>
+                <span class="titleLarge hoverCart">Click and add to cart</span>
+            </div>
+            <div class="cardGallery directionColumn" onclick="Notebook()">
+                <img src="./images/Client3_Notebook.png" class="imgCardGallery">
+                <small>A canvas tote bag with black lettering that says ALL I DO IS READ READ READ</small>
+                <span class="titleLarge hoverCart">Click and add to cart</span>
+            </div>
+            <div class="cardGallery directionColumn" onclick="Stickers()">
+                <img src="./images/Client3_Stickers.png" class="imgCardGallery">
+                <small>A notebook with text on the cover that says Book Haven Bookstore</small>
+                <span class="titleLarge hoverCart">Click and add to cart</span>
+            </div>
+            <div class="cardGallery directionColumn" onclick="ToteBag()">
+                <img src="./images/Client3_ToteBag.png" class="imgCardGallery">
+                <small>A set of four Book Haven Bookstore stickers that promote reading</small>
+                <span class="titleLarge hoverCart">Click and add to cart</span>
+            </div>
+        </div>
+    </main>
+    <footer class="contentSpaceBetween itemsCenter">
+        <div class="footerLinks">
+            <a href="https://www.youtube.com/">
+                <img src="./images/youtube.png" class="footerImgLinks">
+            </a>
+            <a href="https://www.whatsapp.com/">
+                <img src="./images/whatsapp.png" class="footerImgLinks">
+            </a>
+            <a href="https://x.com/">
+                <img src="./images/twitter.png" class="footerImgLinks">
+            </a>
+        </div>
+        <form class="formFooter directionColumn itemsCenter" id="formFooter">
+            <span class="bodyLarge">Interesting to get news?</span>
+            <input placeholder="Type in your email..." class="inputFormFooter" type="email" id="inputFormFooter">
+            <button type="submit">Subscribe</button>
+        </form>
+        <span class="bodyLarge footerText">Monday–Friday: 9 a.m. to 8 p.m. Saturday: 10 a.m. to 6 p.m. Sunday: 11 a.m. to 5 p.m.</span>
+    </footer>
+    <script src="./index.js"></script>
+</body>
+</html>
